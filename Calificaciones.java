@@ -5,26 +5,28 @@ public class Calificaciones{
 
    String alumno;
  
-   int mat, bio, qui, promedio;
+   int materias, notas, calificaciones = 0, promedio;
 
    System.out.println("Ingrese el nombre del alumno: ");
    alumno = lectura.nextLine();
 
-   System.out.println("Digite su calificación en Matematicas");
-   mat = lectura.nextInt(); 
+   System.out.println("ingrese la cantidad de materias en las que estas inscripto: ");
+   materias = lectura.nextInt(); 
+   int i = 0;
+   while (i < materias){
+   
+     System.out.println("Ingrese su calificacion: ");
+     notas = lectura.nextInt();	   
+     calificaciones = calificaciones + notas;
+     i++;
+   }
 
-   System.out.println("Digite su calificación en Biologia");  
-   bio = lectura.nextInt();
-
-   System.out.println("Digite su calificación en Quimica"); 
-   qui = lectura.nextInt();
-
-   promedio = (mat + bio + qui) / 3;
+   promedio = (calificaciones / materias);
    
    if (promedio >= 6){
-    System.out.println("El alumno " + alumno + "aprobo con un promedio gral de: " + promedio + " FELICIDADES"); 
+    System.out.println("El alumno " + alumno + " aprobo con un promedio gral de: " + promedio + " FELICIDADES"); 
   }else{
-    System.out.println("El alumno " + alumno + "reprobo con un promedio gral de: " + promedio); 	
+    System.out.println("El alumno " + alumno + " reprobo con un promedio gral de: " + promedio); 	
   } 
  }
 }
