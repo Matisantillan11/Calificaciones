@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Calificaciones{
+  public static void main(String args[]){
+   Scanner lectura = new Scanner(System.in);
+
+   String alumno;
+ 
+   int mat, bio, qui, promedio;
+
+   System.put.println("Ingrese el nombre del alumno: ");
+   alumno = lectura.nextLine();
+
+   System.out.println("Digite su calificación en Matematicas");
+   mat = lectura.nextInt(); 
+
+   System.out.println("Digite su calificación en Biologia");  
+   bio = lectura.nextInt();
+
+   System.out.println("Digite su calificación en Quimica"); 
+   qui = lectura.netxInt();
+
+   pro = (mat + bio + quim) / 3;
+   
+   if (pro >= 6){
+    System.out.println("El alumno " + alumno + "aprobó con un promedio de: " + pro + "FELICIDADES"); 
+  }else{
+    System.out.println("El alumno " + alumno + "reprobó con un promedio de: " + pro); 	
+  } 
+ }
+}
